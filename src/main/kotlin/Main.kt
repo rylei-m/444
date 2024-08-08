@@ -1,6 +1,7 @@
 package org.example
 
 import org.example.binaryNumber.BinaryVerifier
+import org.example.validEmailAddress.EmailVerifier
 import org.example.validFloatingPointValue.FloatingPointVerifier
 import org.example.validInteger.IntegerVerifier
 
@@ -38,5 +39,16 @@ fun main() {
     println(binaryVerifier.verify("100a01"))
     println(binaryVerifier.verify("0000")) // Starts and ends with 0
     println(binaryVerifier.verify("")) // Empty string
+
+    val emailVerifier = EmailVerifier()
+    println("should be true:")
+    println(emailVerifier.verify("a@b.c")) // true
+    println(emailVerifier.verify("joseph.ditton@usu.edu")) // true
+    println(emailVerifier.verify("{}*$.&$*(@*$%&.*&*")) // true
+    println("should be false:")
+    println(emailVerifier.verify("@b.c")) // false
+    println(emailVerifier.verify("a@b@c.com")) // false
+    println(emailVerifier.verify("a.b@b.b.c")) // false
+    println(emailVerifier.verify("joseph ditton@usu.edu")) // false
 }
 
