@@ -25,6 +25,7 @@ fun main() {
     println(floatingPointVerifier.verify("012.4"))
 
     val binaryVerifier = BinaryVerifier()
+    println("Binary States")
     println(binaryVerifier.verify("1"))
     println(binaryVerifier.verify("11"))
     println(binaryVerifier.verify("101"))
