@@ -1,0 +1,4 @@
+package validEmailAddressTest
+
+class PeriodStateTest {
+}

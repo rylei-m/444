@@ -1,4 +1,4 @@
 package validFloatingPointValueTest
 
-class IntegerStateTest {
+class IntegerPartStateTest {
 }
