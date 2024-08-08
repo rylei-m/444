@@ -1,7 +1,7 @@
 package org.example.validBinaryNumber
 
 class BinaryVerifier {
-    lateinit var state: BinaryState
+    lateinit var state: BinaryNumberState
 
     fun verify(string: String): Boolean {
         if (string.isEmpty()) return false

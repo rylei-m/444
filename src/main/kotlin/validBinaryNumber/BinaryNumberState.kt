@@ -1,5 +1,5 @@
 package org.example.validBinaryNumber
 
-interface BinaryState {
+interface BinaryNumberState {
     fun consumeCharacter(char: String, binaryVerifier: BinaryVerifier)
 }

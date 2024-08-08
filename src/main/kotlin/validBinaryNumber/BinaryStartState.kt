@@ -1,6 +1,6 @@
 package org.example.validBinaryNumber
 
-class BinaryStartState : BinaryState {
+class BinaryStartState : BinaryNumberState {
     override fun consumeCharacter(char: String, binaryVerifier: BinaryVerifier) {
         if (char == "1") {
             binaryVerifier.state = MiddleState()

@@ -11,7 +11,10 @@ class InitialState : ComplexPasswordState {
                 complexPasswordVerifier.hasSpecialChar = true
                 complexPasswordVerifier.state = HasSpecialCharState()
             }
-            else -> complexPasswordVerifier.state = RegularCharState()
+            in 'a'..'z' -> {
+                complexPasswordVerifier.state = RegularCharState()
+            }
+            else -> complexPasswordVerifier.state = InvalidState()
         }
     }
 }

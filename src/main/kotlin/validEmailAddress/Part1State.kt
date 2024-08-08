@@ -7,8 +7,7 @@ class Part1State : EmailState {
                 emailVerifier.incrementAtSymbolCount()
                 emailVerifier.state = AtSymbolState()
             }
-            char.isLetterOrDigit() || char in "-_." -> {
-            }
+            char.isLetterOrDigit() || char in "-_." -> Part1State()
             else -> emailVerifier.state = InvalidState()
         }
     }
