@@ -1,0 +1,4 @@
+package validComplexPasswordTest
+
+class HasSpecialCharStateTest {
+}
