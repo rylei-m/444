@@ -8,7 +8,6 @@ class Part1State : EmailState {
                 emailVerifier.state = AtSymbolState()
             }
             char.isLetterOrDigit() || char in "-_." -> {
-                // Continue consuming characters for part1
             }
             else -> emailVerifier.state = InvalidState()
         }

@@ -2,10 +2,8 @@ package org.example.validComplexPassword
 
 class HasCapitalState : ComplexPasswordState {
     override fun consumeCharacter(char: Char, complexPasswordVerifier: ComplexPasswordVerifier) {
-        val specialChars = "!@#$%&*;".toCharArray()
-
         when {
-            char in specialChars -> {
+            char in "!@#$%&*;" -> {
                 complexPasswordVerifier.hasSpecialChar = true
                 complexPasswordVerifier.state = HasSpecialCharState()
             }

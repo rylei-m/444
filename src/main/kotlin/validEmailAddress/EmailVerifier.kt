@@ -10,7 +10,6 @@ class EmailVerifier {
         string.forEach { char ->
             state.consumeCharacter(char, this)
         }
-        // Valid if the last state is ValidState and we have exactly one @ and one period
         return state is ValidState && atSymbolCount == 1 && periodCount == 1
     }
 
