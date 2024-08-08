@@ -14,6 +14,9 @@ class InitialState : ComplexPasswordState {
             in 'a'..'z' -> {
                 complexPasswordVerifier.state = RegularCharState()
             }
+            in "0123456789" -> {
+                complexPasswordVerifier.state = HasNumberState()
+            }
             else -> complexPasswordVerifier.state = InvalidState()
         }
     }

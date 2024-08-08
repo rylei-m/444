@@ -5,10 +5,10 @@ class Part2State : EmailState {
         when {
             char == '.' -> {
                 emailVerifier.incrementPeriodCount()
-                emailVerifier.state = Part3State()
+                emailVerifier.state = PeriodState()
             }
-            char.isLetterOrDigit() || char in "-_" -> {
-            }
+            emailVerifier.isValidChar(char) || char in "-_" -> emailVerifier.state = Part2State()
+
             else -> emailVerifier.state = InvalidState()
         }
     }

@@ -5,9 +5,9 @@ class AtSymbolState : EmailState {
         when {
             char == '.' -> {
                 emailVerifier.incrementPeriodCount()
-                emailVerifier.state = PeriodState()
+                emailVerifier.state = InvalidState()
             }
-            char.isLetterOrDigit() || char in "-_" -> {
+            emailVerifier.isValidChar(char) || char in "-_" -> {
                 emailVerifier.state = Part2State()
             }
             else -> emailVerifier.state = InvalidState()

@@ -23,6 +23,6 @@ class ComplexPasswordVerifier {
             }
         }
 
-        return hasCapitalLetter && hasSpecialChar && !endsWithSpecialChar
+        return state is HasCapitalState || state is RegularCharState || state is ValidState
     }
 }
