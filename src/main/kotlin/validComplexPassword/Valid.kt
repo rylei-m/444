@@ -7,7 +7,7 @@ class Valid : State {
     override fun consumeCharacter(char: String): State {
         when (char) {
             in " " -> Invalid()
-            in "!@#\$%&*;" -> Part3()
+            in "!@#\$%&*;" -> SpecialWithCapital()
         }
         return Valid()
     }
