@@ -1,10 +1,10 @@
-package org.example.binary
+package org.example.validBinaryNumber
 
-import org.example.Email.Valid
 import org.example.Invalid
 import org.example.State
+import org.example.Valid
 
-class FirstBinaryNumber : State {
+class Valid : State, Valid {
     override fun consumeCharacter(char: String): State {
         when (char) {
             in "1" -> Valid()
@@ -12,5 +12,4 @@ class FirstBinaryNumber : State {
         }
         return Invalid()
     }
-
 }
