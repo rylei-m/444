@@ -10,4 +10,3 @@ class ZeroState: State {
         return Invalid()
     }
 }
-    

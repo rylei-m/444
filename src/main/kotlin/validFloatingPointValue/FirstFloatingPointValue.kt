@@ -5,10 +5,11 @@ import org.example.Invalid
 
 class FirstFloatingPointValue : State {
     override fun consumeCharacter(char: String): State {
-        char in "123456789"; return NoPeriodYet()
-        char in "0"; return PeriodState()
+        when (char) {
+            in "123456789" -> NoPeriodYet()
+            in "." -> PeriodState()
+            in "0" -> ZeroState()
+        }
         return Invalid()
     }
 }
-
-char in "0123456789" -> floatingPointVerifier.state = FractionalPartState()
