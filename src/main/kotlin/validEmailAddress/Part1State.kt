@@ -4,7 +4,6 @@ class Part1State : EmailState {
     override fun consumeCharacter(char: Char, emailVerifier: EmailVerifier) {
         when (char) {
             '@' -> {
-                emailVerifier.incrementAtSymbolCount()
                 emailVerifier.state = AtSymbolState()
             }
             '.' -> {

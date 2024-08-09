@@ -1,6 +1,10 @@
 package org.example.validInteger
 
-class Invalid: IntegerState {
-    override fun consumeCharacter(char: String, integerVerifier: IntegerVerifier) {
+import org.example.State
+import org.example.Verifier
+
+class Invalid: State {
+    override fun consumeCharacter(char: String, verifier: Verifier): State {
+        TODO("Not yet implemented")
     }
 }

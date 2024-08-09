@@ -1,9 +1,13 @@
 package org.example.validInteger
 
-class Valid: IntegerState {
-    override fun consumeCharacter(char: String, integerVerifier: IntegerVerifier) {
+import org.example.State
+import org.example.Valid
+import org.example.Verifier
+
+class Valid: State, Valid {
+    override fun consumeCharacter(char: String, verifier: Verifier): State {
         if (char !in "0123456789") {
-            integerVerifier.state = Invalid()
+            return Invalid()
         }
     }
 }
