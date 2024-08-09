@@ -6,7 +6,9 @@ import org.example.Valid
 
 class Valid: State, Valid {
     override fun consumeCharacter(char: String): State {
-        if (char in "0123456789") return Valid()
-            return Invalid()
+        when (char) {
+            in "0123456789" -> Valid()
+        }
+        return Invalid()
     }
 }
