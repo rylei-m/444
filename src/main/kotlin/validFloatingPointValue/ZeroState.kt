@@ -1,11 +1,13 @@
 package org.example.validFloatingPointValue
 
-class ZeroState: FloatingPointState {
-    override fun consumeCharacter(char: String, floatingPointVerifier: FloatingPointVerifier) {
-        if (char == ".") {
-            floatingPointVerifier.state = PeriodState()
-        } else {
-            floatingPointVerifier.state = Invalid()
-        }
+import org.example.Invalid
+import org.example.State
+
+class ZeroState: State {
+    override fun consumeCharacter(char: String) : State {
+        if (char == ".") {  PeriodState() }
+        if (char in "0123456789") { ZeroState() }
+        return Invalid()
     }
 }
+    

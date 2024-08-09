@@ -1,4 +1,3 @@
 package org.example
 
-interface Valid {
-}
+interface Valid { }

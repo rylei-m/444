@@ -1,10 +1,6 @@
-package org.example
-
 import org.example.validBinaryNumber.BinaryVerifier
 import org.example.validComplexPassword.ComplexPasswordVerifier
 import org.example.validEmailAddress.EmailVerifier
-import org.example.validFloatingPointValue.FloatingPointVerifier
-import org.example.validInteger.IntegerVerifier
 
 fun main() {
     val verifier = IntegerVerifier()

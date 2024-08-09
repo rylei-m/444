@@ -1,6 +1,6 @@
 package org.example
 
-class Verifier {
+open class Verifier {
 
     fun verify(string: String, firstState: State): Boolean {
         var state = firstState
