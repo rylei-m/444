@@ -10,7 +10,7 @@ class FirstFactory {
     private val firstState = mapOf(
         Pair("validInteger", FirstInteger()),
         Pair("validFloatingPoint", FirstFloatingPointValue()),
-        Pair("validBinaryNumber", FirstBinaryNumber()),
+        Pair("validBinary", FirstBinaryNumber()),
         Pair("validEmailAddress", FirstEmailAddress()),
         Pair("validComplexPassword", FirstComplexPassword()),
         )

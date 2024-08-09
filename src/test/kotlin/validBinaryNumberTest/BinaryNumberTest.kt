@@ -13,7 +13,7 @@ class BinaryNumberTest {
     @Test
     fun testBinaryNumber() {
         val verifier = Verifier()
-        val validator = firstFactory.firstCreate("validBinaryNumber")!!
+        val validator = firstFactory.firstCreate("validBinary")!!
 
         println("---ComplexPassword---")
         println("Should Be True:")
