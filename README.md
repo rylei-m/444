@@ -47,8 +47,8 @@ An email address contains exactly 1 @ symbol,
 An email address contains exactly 1 period after the @ symbol
 Neither part 1, 2, or 3 can be empty
 Any character other than the space character, or @ symbol are valid in part 1, 2, and 3 (rule 3 still applies for parts 2 and 3)
-Examples of valid email addresses are: "a@b.c", "joseph.ditton@usu.edu", "{}*$.&$*(@*$%&.*&*",
-Examples of invalid email addresses are: "@b.c" (part1 is empty), "a@b@c.com" (to many @ symbols), "a.b@b.b.c" (to many periods after the @), "joseph ditton@usu.edu" (space char not allowed)
+Examples of valid email addresses are: "a@b.c", "the.teacher@school.edu", "{}*$.&$*(@*$%&.*&*",
+Examples of invalid email addresses are: "@b.c" (part1 is empty), "a@b@c.com" (to many @ symbols), "a.b@b.b.c" (to many periods after the @), "the teacher@school.edu" (space char not allowed)
 ### You should be able to detect a complex password
 A complex password is a password that has at least 1 capital letter, at least 1 special character (!@#$%&*), and cannot end with a special character.
 A password has at least 8 chars
