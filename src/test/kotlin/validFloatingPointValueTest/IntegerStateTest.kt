@@ -1,4 +1,0 @@
-package validFloatingPointValueTest
-
-class IntegerStateTest {
-}
