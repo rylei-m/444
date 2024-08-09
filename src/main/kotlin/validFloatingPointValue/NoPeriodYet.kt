@@ -3,10 +3,12 @@ package org.example.validFloatingPointValue
 import org.example.Invalid
 import org.example.State
 
-class ZeroState: State {
+class NoPeriodYet: State {
     override fun consumeCharacter(char: String) : State {
-        if (char == ".") {  PeriodState() }
-        if (char in "0123456789") { ZeroState() }
+        when (char) {
+            in "." -> PeriodState()
+            in "0123456789" -> NoPeriodYet()
+        }
         return Invalid()
     }
 }

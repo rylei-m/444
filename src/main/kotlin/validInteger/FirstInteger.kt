@@ -1,14 +1,12 @@
-package org.example.validBinaryNumber
+package org.example.validInteger
 
 import org.example.Invalid
 import org.example.State
-import org.example.Valid
 
-class Valid : State, Valid {
+class FirstInteger: State {
     override fun consumeCharacter(char: String): State {
         when (char) {
-            in "1" -> Valid()
-            in "0" -> Zero()
+            in "123456789" -> Valid()
         }
         return Invalid()
     }

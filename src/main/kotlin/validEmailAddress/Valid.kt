@@ -1,13 +1,13 @@
-package org.example.validFloatingPointValue
+package org.example.Email
 
 import org.example.Invalid
 import org.example.State
 
-class PeriodState: State {
+class Valid : State {
     override fun consumeCharacter(char: String) : State {
         when (char) {
-            in "0123456789" -> Valid()
+            in "@", " " -> Invalid()
         }
-        return Invalid()
+        return Valid()
     }
 }

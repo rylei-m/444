@@ -1,15 +1,14 @@
-package org.example.validBinaryNumber
+package org.example.Email
 
 import org.example.Invalid
 import org.example.State
 import org.example.Valid
 
-class Valid : State, Valid {
+class Domain : State {
     override fun consumeCharacter(char: String): State {
         when (char) {
-            in "1" -> Valid()
-            in "0" -> Zero()
+            in "@", " " -> Invalid()
         }
-        return Invalid()
+        return Valid()
     }
 }

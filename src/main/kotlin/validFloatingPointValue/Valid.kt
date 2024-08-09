@@ -1,7 +1,13 @@
 package org.example.validFloatingPointValue
 
-class Valid: FloatingPointState {
-    override fun consumeCharacter(char: String, floatingPointVerifier: FloatingPointVerifier) {
+import org.example.Invalid
+import org.example.State
 
+class Valid: State {
+    override fun consumeCharacter(char: String) : State {
+        when (char) {
+            in "0123456789" -> Valid()
+        }
+        return Invalid()
     }
 }

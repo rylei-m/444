@@ -1,4 +1,0 @@
-package validComplexPasswordTest
-
-class ValidStateTest {
-}
