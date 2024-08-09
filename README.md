@@ -13,7 +13,7 @@ You do not need to build an executable for this and can just demonstrate it work
 
 ## Objectives
 Practice using the state pattern.
-# Requirements
+## Requirements
 1. UML (30 pts)
 You should do your UML first before implementing
 You should submit a state diagram for each state machine
