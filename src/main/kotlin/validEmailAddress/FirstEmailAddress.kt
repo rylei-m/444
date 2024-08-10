@@ -5,9 +5,9 @@ import org.example.State
 
 class FirstEmailAddress : State {
     override fun consumeCharacter(char: String): State {
-        when {
-            char in " " || char in "@" -> Invalid()
+        return when (char) {
+            in "@ " -> Invalid()
+            else -> LocalPart()
         }
-        return LocalPart()
     }
 }

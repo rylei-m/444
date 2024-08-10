@@ -6,9 +6,9 @@ import org.example.Valid
 
 class Domain : State {
     override fun consumeCharacter(char: String): State {
-        when (char) {
-            in "@", " " -> Invalid()
+        return when (char) {
+            in "@ " -> Invalid()
+            else -> Valid()
         }
-        return Valid()
     }
 }

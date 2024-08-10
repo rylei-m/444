@@ -5,11 +5,11 @@ import org.example.State
 
 class Basic : State {
     override fun consumeCharacter(char: String): State {
-        when (char) {
-            in "!@#\$%&*;" -> SpecialWithoutCapital()
-            in "A".."Z" -> CapitalWithoutSpecial()
+        return when (char) {
+            in "~`!@#\$%^&*()_-+={[}]:;\"'<,>.?/|\\'" -> SpecialWithoutCapital()
+            in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" -> CapitalWithoutSpecial()
             in " " -> Invalid()
+            else -> Basic()
         }
-        return Basic()
     }
 }

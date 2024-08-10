@@ -5,10 +5,10 @@ import org.example.State
 
 class MailServer : State {
     override fun consumeCharacter(char: String): State {
-        when (char) {
+        return when (char) {
             in "." -> Domain()
-            in "@", in " " -> Invalid()
+            in "@ " -> Invalid()
+            else -> MailServer()
         }
-        return MailServer()
     }
 }

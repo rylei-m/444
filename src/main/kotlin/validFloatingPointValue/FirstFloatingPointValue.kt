@@ -5,11 +5,11 @@ import org.example.Invalid
 
 class FirstFloatingPointValue : State {
     override fun consumeCharacter(char: String): State {
-        when (char) {
+        return when (char) {
             in "123456789" -> NoPeriodYet()
             in "." -> PeriodState()
             in "0" -> ZeroState()
+            else -> Invalid()
         }
-        return Invalid()
     }
 }

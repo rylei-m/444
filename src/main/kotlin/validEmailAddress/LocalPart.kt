@@ -5,10 +5,10 @@ import org.example.Invalid
 
 class LocalPart : State {
     override fun consumeCharacter(char: String): State {
-        when (char) {
+        return when (char) {
             in "@" -> MailServer()
             in " " -> Invalid()
+            else -> LocalPart()
         }
-        return LocalPart()
     }
 }

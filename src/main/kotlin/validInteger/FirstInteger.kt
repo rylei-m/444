@@ -5,9 +5,9 @@ import org.example.State
 
 class FirstInteger: State {
     override fun consumeCharacter(char: String): State {
-        when (char) {
+        return when (char) {
             in "123456789" -> Valid()
+            else -> Invalid()
         }
-        return Invalid()
     }
 }

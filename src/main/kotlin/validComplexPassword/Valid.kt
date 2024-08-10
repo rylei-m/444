@@ -2,13 +2,14 @@ package org.example.validComplexPassword
 
 import org.example.Invalid
 import org.example.State
+import org.example.Valid
 
-class Valid : State {
+class Valid: State, Valid {
     override fun consumeCharacter(char: String): State {
-        when (char) {
+        return when (char) {
             in " " -> Invalid()
-            in "!@#\$%&*;" -> SpecialWithCapital()
+            in "~`!@#\$%^&*()_-+={[}]:;\"'<,>.?/|\\'" -> SpecialWithCapital()
+            else -> Valid()
         }
-        return Valid()
     }
 }

@@ -5,10 +5,10 @@ import org.example.State
 
 class CapitalWithoutSpecial : State {
     override fun consumeCharacter(char: String): State {
-        when (char) {
-            in "!@#\$%&*;" -> SpecialWithCapital()
+        return when (char) {
+            in "~`!@#\$%^&*()_-+={[}]:;\"'<,>.?/|\\'" -> SpecialWithCapital()
             in " " -> Invalid()
+            else -> CapitalWithoutSpecial()
         }
-        return CapitalWithoutSpecial()
     }
 }

@@ -5,10 +5,10 @@ import org.example.State
 
 class NoPeriodYet: State {
     override fun consumeCharacter(char: String) : State {
-        when (char) {
+        return when (char) {
             in "." -> PeriodState()
             in "0123456789" -> NoPeriodYet()
+            else -> Invalid()
         }
-        return Invalid()
     }
 }

@@ -5,10 +5,10 @@ import org.example.State
 
 class SpecialWithoutCapital : State {
     override fun consumeCharacter(char: String): State {
-        when (char) {
+        return when (char) {
             in " " -> Invalid()
-            in "A".."Z" -> Valid()
+            in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" -> Valid()
+            else -> SpecialWithoutCapital()
         }
-        return SpecialWithoutCapital()
     }
 }

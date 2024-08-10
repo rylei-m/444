@@ -5,9 +5,9 @@ import org.example.State
 
 class PeriodState: State {
     override fun consumeCharacter(char: String) : State {
-        when (char) {
+        return when (char) {
             in "0123456789" -> Valid()
+            else -> Invalid()
         }
-        return Invalid()
     }
 }

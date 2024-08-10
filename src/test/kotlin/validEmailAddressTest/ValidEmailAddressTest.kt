@@ -2,28 +2,23 @@ package validEmailAddressTest
 
 import org.example.Email.FirstEmailAddress
 import org.example.Verifier
-import org.example.validBinaryNumber.FirstBinaryNumber
-import org.junit.jupiter.api.Assertions.assertTrue
-import org.junit.jupiter.api.Assertions.assertFalse
-import org.junit.jupiter.api.Test
+import kotlin.test.Test
+import kotlin.test.assertFalse
+import kotlin.test.assertTrue
 
 class ValidEmailAddressTest {
-    val startingState = FirstEmailAddress()
 
     @Test
     fun testEmailAddress() {
         val verifier = Verifier()
-        println("---EmailAddress---")
-        println("Should Be True:")
-        assertTrue(verifier.verify("abc@def.ghi", startingState))
-        assertTrue(verifier.verify("a@b.c", startingState))
-        assertTrue(verifier.verify("joseph.ditton@usu.edu", startingState))
-        assertTrue(verifier.verify("{}*\$.&\$*(@*\$%&.*&*", startingState))
-        println("Should Be False:")
-        assertFalse(verifier.verify("@b.c", startingState))
-        assertFalse(verifier.verify("a@b@c.com", startingState))
-        assertFalse(verifier.verify("a.b@b.b.c", startingState))
-        assertFalse(verifier.verify("joseph ditton@usu.edu", startingState))
-        println(" ")
+        assertTrue(verifier.verify("abc@def.ghi", FirstEmailAddress()))
+        assertTrue(verifier.verify("a@b.c", FirstEmailAddress()))
+        assertTrue(verifier.verify("joseph.ditton@usu.edu", FirstEmailAddress()))
+        assertTrue(verifier.verify("{}*\$.&\$*(@*\$%&.*&*", FirstEmailAddress()))
+
+        assertFalse(verifier.verify("@b.c", FirstEmailAddress()))
+        assertFalse(verifier.verify("a@b@c.com", FirstEmailAddress()))
+        assertFalse(verifier.verify("a.b@b.b.c", FirstEmailAddress()))
+        assertFalse(verifier.verify("joseph ditton@usu.edu", FirstEmailAddress()))
     }
 }
