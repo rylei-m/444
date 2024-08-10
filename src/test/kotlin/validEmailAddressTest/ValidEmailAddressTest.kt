@@ -13,7 +13,7 @@ class ValidEmailAddressTest {
         val verifier = Verifier()
         assertTrue(verifier.verify("abc@def.ghi", FirstEmailAddress()))
         assertTrue(verifier.verify("a@b.c", FirstEmailAddress()))
-        assertTrue(verifier.verify("joseph.ditton@usu.edu", FirstEmailAddress()))
+        assertTrue(verifier.verify("teacher.lol@usu.edu", FirstEmailAddress()))
         assertTrue(verifier.verify("{}*\$.&\$*(@*\$%&.*&*", FirstEmailAddress()))
 
         assertFalse(verifier.verify("@b.c", FirstEmailAddress()))
